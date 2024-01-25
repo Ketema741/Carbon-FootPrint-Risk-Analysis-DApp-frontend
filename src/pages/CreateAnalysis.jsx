@@ -91,10 +91,9 @@ const CreateAnalysis = () => {
   const [isloadingAnalysis, setisloadingAnalysis] = useState(false)
   const handleSubmit = async (e) => {
     setisloadingAnalysis(true);
-    e.preventDefault();
-
+    e.preventDefault()
     axios
-      .post("http://dawitiscomming.pythonanywhere.com/endpoint", form)
+      .get("http://dawitiscomming.pythonanywhere.com/endpoint", form)
       .then((response) => {
         setisloadingAnalysis(false);
         setanalysisresult(response.data.chatgpt_response);
