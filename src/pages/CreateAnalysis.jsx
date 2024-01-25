@@ -94,10 +94,10 @@ const CreateAnalysis = () => {
     e.preventDefault();
 
     axios
-      .post("http://127.0.0.1:5000/endpoint", form)
+      .post("http://dawitiscomming.pythonanywhere.com/endpoint", form)
       .then((response) => {
         setisloadingAnalysis(false);
-        setanalysisresult(response.data.processed_message);
+        setanalysisresult(response.data.chatgpt_response);
       })
       .catch((error) => {
         setisloadingAnalysis(false);

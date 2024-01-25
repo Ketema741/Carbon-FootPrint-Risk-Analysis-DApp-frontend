@@ -79,7 +79,6 @@ export const preferredBlockchainTechnologies = [
   "Ouroboros Hydra",
   "Avalanche Consensus",
   "Scrypt",
-  "Ethash",
   "Equihash",
   "RandomX",
   "Argon2",
