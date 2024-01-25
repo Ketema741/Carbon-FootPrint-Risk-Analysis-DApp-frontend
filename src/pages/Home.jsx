@@ -2,19 +2,18 @@ import React, { useState, useEffect } from 'react'
 import abi from "../contractJson/Carbon_Foot_print.json"
 import { ethers } from "ethers"
 import { DisplayAnalysis } from '../components';
-
+import { contractAddres } from '../constants'
 const Home = () => {
   const [state, setState] = useState({
     provider: null,
     signer: null,
     contract: null,
-  }) 
- 
+  })
+
   const [account, setAccount] = useState('Not connected');
   useEffect(() => {
     const template = async () => {
 
-      const contractAddres = "0xc261c4f47bC0E7DD86bd9ba5dEa8B7775F023501";
       const contractABI = abi.abi;
 
       // Metamask part

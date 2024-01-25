@@ -4,6 +4,7 @@ import { ethers } from "ethers";
 import abi from "../contractJson/Carbon_Foot_print.json";
 import { CustomButton } from "../components";
 import SelectWithLabel from "../components/SelectWithLabel";
+import { contractAddres } from '../constants'
 
 import { 
   currencies,
@@ -39,7 +40,6 @@ const CreateAnalysis = () => {
   const [account, setAccount] = useState("Not connected");
   useEffect(() => {
     const template = async () => {
-      const contractAddres = "0xc261c4f47bC0E7DD86bd9ba5dEa8B7775F023501";
       const contractABI = abi.abi;
       // Metamask part
       // 1. In order do transactions on sepolia testnet
