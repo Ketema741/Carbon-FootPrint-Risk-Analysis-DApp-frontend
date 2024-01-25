@@ -92,8 +92,14 @@ const CreateAnalysis = () => {
   const handleSubmit = async (e) => {
     setisloadingAnalysis(true);
     e.preventDefault()
+    const config = {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
+      }
+    };
     axios
-      .get("http://dawitiscomming.pythonanywhere.com/endpoint", form)
+      .post("http://dawitiscomming.pythonanywhere.com/endpoint", form, config)
       .then((response) => {
         setisloadingAnalysis(false);
         setanalysisresult(response.data.chatgpt_response);
