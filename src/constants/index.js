@@ -1,6 +1,6 @@
 import {  dashboard, logoutIcon, profile } from '../assets';
 
-export const contractAddres = "0xdB53F82F6E25783a32e7b32AD7325dbd98bB4FB5";
+export const contractAddres = "0x209CcBd155ba3ADB2C8CB8C4BEeA8e34e438e7Da";
 
 export const navlinks = [
   {
